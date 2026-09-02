@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /post.html
+Allow: /404.html
+Allow: /sitemap.xml
+
+Disallow: /src/
+Disallow: /public/
+Disallow: /vercel.json
+Disallow: /robots.txt
+
+# Blokir akses ke file internal
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.xml$
+Disallow: /*.json$
+
+# Blokir parameter pencarian (jika ada)
+Disallow: /*?*
+
+# Sitemap
+Sitemap: https://yourdomain.com/sitemap.xml

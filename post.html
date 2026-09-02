@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" class="drK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample Post Title - My Blog</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <style>
+    /* Override untuk post page */
+    .mainbar {
+      flex-basis: 100%;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .sidebar {
+      display: none;
+    }
+    .post-title {
+      font-size: 36px;
+      line-height: 1.3em;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+    .post-meta {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+    .post-meta .author {
+      display: flex;
+      align-items: center;
+      margin-right: 15px;
+    }
+    .post-meta .author .avatar {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background: #e1f5fe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 8px;
+    }
+    .post-meta .date {
+      margin-right: 15px;
+    }
+    .post-content {
+      font-size: 16px;
+      line-height: 1.8em;
+      margin-bottom: 40px;
+    }
+    .post-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e6e6e6;
+    }
+    .post-footer .share {
+      display: flex;
+      align-items: center;
+    }
+    .post-footer .share a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #f1f1f0;
+      margin: 0 5px;
+      transition: all 0.2s ease;
+    }
+    .post-footer .share a:hover {
+      background: #e6e6e6;
+      transform: translateY(-2px);
+    }
+    .post-footer .share svg {
+      width: 20px;
+      height: 20px;
+      fill: #08102b;
+    }
+    .post-footer .comments {
+      display: flex;
+      align-items: center;
+    }
+    .post-footer .comments a {
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 3px;
+      background: #204ecf;
+      color: #fffdfc;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+    .post-footer .comments a:hover {
+      background: #1a41b5;
+      transform: translateY(-2px);
+    }
+    .post-footer .comments svg {
+      width: 18px;
+      height: 18px;
+      stroke: #fffdfc;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="headCn">
+    <div class="headIn">
+      <div class="headL">
+        <h1><a href="/">My Blog</a></h1>
+      </div>
+      <div class="headR">
+        <nav>
+          <a href="/">Home</a>
+          <a href="/post.html">Post</a>
+          <a href="/404.html">404</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="mainIn">
+    <div class="mainbar">
+      <article class="ntry">
+        <!-- Thumbnail -->
+        <div class="pThmb">
+          <div class="thmb">
+            <img src="/src/images/post-placeholder.jpg" alt="Post Thumbnail" />
+          </div>
+        </div>
+
+        <!-- Title -->
+        <h1 class="post-title">Sample Post Title</h1>
+
+        <!-- Metadata -->
+        <div class="post-meta">
+          <div class="author">
+            <div class="avatar">A</div>
+            <span>Admin</span>
+          </div>
+          <div class="date">Mar 28, 2023</div>
+          <div class="labels">
+            <span>Technology</span> • <span>Web</span>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="post-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h2>Subheading 1</h2>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <h2>Subheading 2</h2>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <blockquote>
+            <p>This is a blockquote. It’s a great way to highlight important quotes or statements.</p>
+          </blockquote>
+          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="post-footer">
+          <div class="share">
+            <a href="#"><svg viewBox="0 0 24 24"><path d="M16.44 8.8999C20.04 9.2099 21.51 11.0599 21.51 15.1099V15.2399C21.51 19.7099 19.72 21.4999 15.25 21.4999H8.73998C4.26998 21.4999 2.47998 19.7099 2.47998 15.2399V15.1099C2.47998 11.0899 3.92998 9.2399 7.46998 8.9099"/></svg></a>
+            <a href="#"><svg viewBox="0 0 24 24"><path d="M12 18.5C15.5899 18.5 18.5 15.5899 18.5 12C18.5 8.41015 15.5899 5.5 12 5.5C8.41015 5.5 5.5 8.41015 5.5 12C5.5 15.5899 8.41015 18.5 12 18.5Z"/></svg></a>
+            <a href="#"><svg viewBox="0 0 24 24"><path d="M24,3H8A5,5,0,0,0,3,8V24a5,5,0,0,0,5,5H24a5,5,0,0,0,5-5V8A5,5,0,0,0,24,3Zm3,21a3,3,0,0,1-3,3H8a3,3,0,0,1-3-3V8A3,3,0,0,1,8,5H24a3,3,0,0,1,3,3Z"/></svg></a>
+          </div>
+          <div class="comments">
+            <a href="#comments">
+              <svg viewBox="0 0 24 24"><path d="M12,22C12,22 9.856,15 7,15 C4.145,15 0,22 0,22"/></svg>
+              3 Comments
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Comments Section -->
+      <div id="comments" class="cmShw">
+        <div class="cmDisqus">
+          <div class="cmBtn button ln">
+            <span>Join the Conversation</span>
+          </div>
+        </div>
+        <div class="cm">
+          <div class="cmH">
+            <h3 class="title">Comments</h3>
+            <div class="s">
+              <span>Sort by</span>
+              <span>Latest</span>
+            </div>
+          </div>
+          <div class="cmCn">
+            <ol>
+              <li>
+                <div class="cmIn">
+                  <div class="cmHr">
+                    <div class="n">John Doe</div>
+                    <div class="d">Mar 28, 2023</div>
+                  </div>
+                  <div class="cmCo">
+                    Great post! I learned a lot from this.
+                  </div>
+                  <div class="cmAc">
+                    <a href="#">Reply</a>
+                    <a href="#">Like</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="cmIn">
+                  <div class="cmHr">
+                    <div class="n">Jane Smith</div>
+                    <div class="d">Mar 29, 2023</div>
+                  </div>
+                  <div class="cmCo">
+                    Thanks for sharing this! Really helpful.
+                  </div>
+                  <div class="cmAc">
+                    <a href="#">Reply</a>
+                    <a href="#">Like</a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="fotIn">
+      <div class="widget">
+        <h4 class="title">About Me</h4>
+        <div class="abtU">
+          <p>I'm a web developer and blogger who loves to share knowledge about web technologies.</p>
+        </div>
+      </div>
+      <div class="widget">
+        <h4 class="title">Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/post.html">Post</a></li>
+          <li><a href="/404.html">404</a></li>
+        </ul>
+      </div>
+      <div class="widget">
+        <h4 class="title">Follow Me</h4>
+        <div class="sL">
+          <a href="#"><svg viewBox="0 0 24 24"><path d="M24,3H8A5,5,0,0,0,3,8V24a5,5,0,0,0,5,5H24a5,5,0,0,0,5-5V8A5,5,0,0,0,24,3Zm3,21a3,3,0,0,1-3,3H8a3,3,0,0,1-3-3V8A3,3,0,0,1,8,5H24a3,3,0,0,1,3,3Z"/></svg></a>
+          <a href="#"><svg viewBox="0 0 24 24"><path d="M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,26A12,12,0,1,1,28,16,12,12,0,0,1,16,28Z"/></svg></a>
+          <a href="#"><svg viewBox="0 0 24 24"><path d="M12,22C12,22 9.856,15 7,15 C4.145,15 0,22 0,22"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="cdtIn">
+      <div class="fotCd">
+        <span>© 2026 My Blog. All rights reserved.</span>
+      </div>
+      <div class="toTopF" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 18.5C15.5899 18.5 18.5 15.5899 18.5 12C18.5 8.41015 15.5899 5.5 12 5.5C8.41015 5.5 5.5 8.41015 5.5 12C5.5 15.5899 8.41015 18.5 12 18.5Z"/>
+          <path d="M19.14 19.14L19.01 19.01M19.01 4.99L19.14 4.86L19.01 4.99ZM4.86 19.14L4.99 19.01L4.86 19.14ZM12 2.08V2V2.08ZM12 22V21.92V22ZM2.08 12H2H2.08ZM22 12H21.92H22ZM4.99 4.99L4.86 4.86L4.99 4.99Z" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/src/js/main.js"></script>
+</body>
+</html>
