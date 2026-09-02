@@ -1,0 +1,20 @@
+{
+  "name": "apf",
+  "version": "1.0.0",
+  "description": "Static blog site with Vercel Speed Insights",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'",
+    "dev": "echo 'Use a local server to serve the site'"
+  },
+  "keywords": [
+    "blog",
+    "static",
+    "vercel"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
