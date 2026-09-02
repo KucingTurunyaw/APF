@@ -288,14 +288,35 @@
     </div>
   </footer>
 
-  <button id="darkModeToggle" class="tDL" style="position: fixed; top: 10px; right: 10px; z-index: 9999; padding: 10px; background: #333; color: white; border: none; cursor: pointer;">
-  Toggle Dark Mode
-</button>
-
 <script>
-  document.getElementById('darkModeToggle').addEventListener('click', function() {
-    document.body.classList.toggle('drK');
-  });
+  // Script sementara untuk dark mode
+  const darkToggle = document.querySelector('#darkModeToggle');
+  const body = document.body;
+
+  if (darkToggle) {
+    darkToggle.style.display = 'block'; // Pastikan tombol terlihat
+    darkToggle.style.cursor = 'pointer';
+    darkToggle.style.position = 'fixed';
+    darkToggle.style.top = '10px';
+    darkToggle.style.right = '10px';
+    darkToggle.style.zIndex = '1000';
+    darkToggle.style.background = '#333';
+    darkToggle.style.color = 'white';
+    darkToggle.style.padding = '10px';
+    darkToggle.style.border = 'none';
+    darkToggle.style.borderRadius = '5px';
+
+    darkToggle.addEventListener('click', () => {
+      body.classList.toggle('drK');
+      localStorage.setItem('mode', body.classList.contains('drK') ? 'darkmode' : 'lightmode');
+    });
+
+    // Cek mode tersimpan
+    const savedMode = localStorage.getItem('mode');
+    if (savedMode === 'darkmode') {
+      body.classList.add('drK');
+    }
+  }
 </script>
 
   <!-- Mobile Menu Overlay -->
